@@ -1,0 +1,16 @@
+{
+	"template": "overeenkomst-laptop.rtf",
+	"naam": "Contract laptop",
+	"actief": true,
+	"fields": {
+		"naam": "Naam gebruiker",
+		"datum": "Datum contract",
+		"merk": "Merk laptop",
+		"type": "Type laptop",
+		"serienummer": "Serienummer",
+		"afdeling": "Afdeling",
+		"toebehoren": "Toebehoren laptop (wat bij de laptop zelf zit zoals laadkabel)",
+		"accessoires": "Extra accesoires (bv kaartlezer, muis, hoes e.d.)",
+		"opmerkingen": "Opmerkingen"
+	}
+}

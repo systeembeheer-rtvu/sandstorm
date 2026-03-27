@@ -1,0 +1,19 @@
+{
+	"template": "overnameformulier-bedrijfsmiddelen.rtf",
+	"naam": "Overnameformulier bedrijfsmiddelen",
+	"actief": true,
+	"fields": {
+		"naam": "Naam gebruiker",
+		"datum": "Datum contract",
+		"datum-overname": "Datum van overname",
+		"soort": "Soort bedrijfsmiddel",
+		"merk": "Merk bedrijfsmiddel",
+		"type": "Type bedrijfsmiddel",
+		"serienummer": "Serienummer",
+		"nummerbehoud": "Nummerbehoud ja/nee",
+		"toebehoren": "Toebehoren",
+		"accessoires": "Accessoires",
+		"overnameprijs": "Overnameprijs",
+		"opmerkingen": "Opmerkingen"
+	}
+}

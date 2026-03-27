@@ -1,0 +1,215 @@
+html, body
+{
+    font-size: 10pt;
+    font-family: tahoma;
+    text-decoration: none;
+}
+
+#site
+{
+    width:100%;
+}
+
+#header
+{
+    background-color:#CC0000;
+}
+
+#header #title
+{
+    float:left;
+    line-height:60px;
+    font-size:200%;
+    color:#FFF;
+}
+
+#header #options
+{
+    float: right;
+}
+
+#header #links
+{
+    float: right;
+    padding: 0 15px 0 0;
+}
+
+#main
+{}
+
+#main #sidebar
+{
+    float:left;
+    width: 180px;
+    padding: 5px 0 5px 5px;
+}
+
+#main #content
+{
+    margin: 0 0 0 190px;
+    padding: 5px 0 5px 5px;
+}
+
+.actie
+{
+    padding-bottom: 15px;
+}
+
+.settings
+{
+    border:solid 1px black;
+    padding: 2px 2px 0;
+    margin:2px;
+    float:left;
+}
+
+#info
+{
+    border: solid 2px red;
+    padding: 5px;
+    font-size: 120%;
+    float:left;
+}
+
+/* a */
+#header #options a:link, #header #options a:visited, #header #options a:active
+{
+    display: block;
+}
+
+#header #links a:link, #header #links a:visited, #header #links a:active
+{
+    display:block;
+    font: 9px Arial, Tahoma;
+    color: #FFFFFF;
+    letter-spacing: 0pt;
+    text-decoration: none;
+}
+
+#header #links a:hover
+{
+    text-decoration: underline;
+}
+
+/* overige */
+.spacer
+{
+    clear:both;
+}
+
+.float
+{
+    float: left;  
+}
+
+span.required
+{
+    color:red;
+}
+
+span.info
+{
+    color:grey;
+    font-size:70%;
+}
+
+#formulier
+{
+    width:605px;
+    border:solid 1px grey;
+    float:left;
+}
+
+#formulier h1
+{
+    font-size: 120%;
+    font-weight: 600;
+    color:white;
+    padding: 5px;
+    background: lightgrey;
+    margin: 0 0 5px;
+}
+
+#formulier p
+{
+    padding:0 0 5px 5px;
+    border-bottom:dotted lightgrey 1px;
+    margin: 0 5px 5px;
+}
+
+#formulier form
+{
+    width: 300px;
+    display:block;
+    padding:0 0 5px 5px;
+    margin: 0 5px 5px;
+}
+
+#formulier input.account
+{
+    width:140px;
+}
+
+#formulier input.email
+{
+    width:250px;
+}
+
+#formulier textarea
+{
+    width:400px;
+    height: 150px;
+}
+
+#hint
+{
+    width:400px;
+    float:right;
+    margin: 12px;
+    border:solid 1px grey;
+    background:lightgrey;
+    padding: 3px 5px 5px;
+}
+
+#succes
+{
+    float:left;
+    border: solid 1px green;
+    margin: 0 0 0 5px;
+}
+
+#succes h1
+{
+    font-size: 120%;
+    font-weight: 600;
+    color:white;
+    padding: 5px;
+    background: lightgreen;
+    margin: 0 0 5px;
+}
+
+#succes p
+{
+    padding: 5px;
+}
+
+#fout
+{
+    float:left;
+    border: solid 1px red;
+    margin: 0 0 0 5px;
+}
+
+#fout h1
+{
+    font-size: 120%;
+    font-weight: 600;
+    color:white;
+    padding: 5px;
+    background: red;
+    margin: 0 0 5px;
+}
+
+#fout p{
+    padding: 5px;
+}

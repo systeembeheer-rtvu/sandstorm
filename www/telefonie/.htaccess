@@ -1,0 +1,8 @@
+AuthUserFile /usr/local/www/intranet/.htpasswd
+AuthGroupFile /usr/local/www/intranet/.htgroup
+AuthName "admin"
+AuthType Basic
+<Limit GET POST>
+  Require valid-user
+  Require group ict
+</Limit> 

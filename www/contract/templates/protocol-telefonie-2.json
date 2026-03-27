@@ -1,0 +1,14 @@
+{
+	"template": "protocol-telefonie-2.rtf",
+	"naam": "Contract protocol telefonie-2 (zelf gekochte telefoon)",
+	"actief": true,
+	"fields": {
+		"naam": "Naam gebruiker",
+		"datum": "Datum contract",
+		"gebruikerscategorie": "Gebruikers categorie (A\/B\/C)",
+		"merk": "Merk telefoon",
+		"type": "Type telefoon",
+		"imei": "IMEI nummer"
+
+	}
+}

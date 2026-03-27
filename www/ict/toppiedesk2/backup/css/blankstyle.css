@@ -1,0 +1,517 @@
+html, body
+{
+    font-size: 10pt;
+    font-family: tahoma;
+    text-decoration: none;
+}
+
+h2
+{
+    font-size:20pt;
+    font-weight:600;
+}
+
+#site
+{
+    width:100%;
+}
+
+#header
+{
+    background-color:#CC0000;
+}
+
+#header #title
+{
+    line-height:60px;
+    font-size:200%;
+    color:#FFF;
+    padding: 0 0 0 25px;
+}
+
+#header #options
+{
+    float: right;
+}
+#header #links
+{
+    padding: 0 0 0 25px;
+}
+#header #options a
+{
+    display: block;
+}
+
+#header #links a:link, #header #links a:visited, #header #links a:active
+{
+    color: #FFF;
+    text-decoration: none;
+    font-weight:600;
+    border: 1px solid #FFF;
+    padding: 5px;
+}
+
+#header #links a:hover
+{
+    background:  #FFF;
+    color: #CC0000;
+}
+
+#header #links a.active
+{
+    background:  #FFF;
+    color: #CC0000;
+}
+
+#main #sidebar
+{
+    float:left;
+    width: 140px;
+    padding: 11px 0 5px 25px;
+}
+
+#main #sidebar ul li
+{
+    color: #CC0000;
+    list-style-type: square;
+    list-style-position: outside;
+}
+
+#main #sidebar ul li a:link, #main #sidebar ul li a:visited, #main #sidebar ul li a:active
+{
+    display: block;
+    color: #000;
+}
+
+#main #sidebar ul li a:hover
+{
+    background: #CC0000;
+    color: #FFF;
+    text-decoration: none;
+}
+
+#main #content
+{
+}
+
+.formulier
+{
+    border:1px solid #808080;
+    float:left;
+    margin:5px;
+}
+
+.formulier h1
+{
+    font-size: 120%;
+    font-weight: 600;
+    color:white;
+    padding: 5px;
+    background: #D3D3D3;
+}
+
+.formulier .header
+{
+	background: #D3D3D3;
+	padding: 5px;
+}
+
+.formulier .header .title
+{
+	font-size: 120%;
+	font-weight: 600;
+	color:white;
+}
+
+.formulier p
+{
+    padding:0 0 5px 5px;
+    border-bottom:dotted #D3D3D3 1px;
+    margin: 0 5px 5px;
+}
+
+.formulier form#dataform
+{
+    float:left;
+    display:block;
+    padding:5px 0 5px 5px;
+}
+
+.formulier form.selected
+{
+    background-color:#E6E6FA;
+}
+
+.formulier div#footer
+{
+    border-top:solid 1px #808080;
+    background-color:#D3D3D3;
+}
+
+.formulier input.account
+{
+    width:140px;
+}
+
+.formulier input.email
+{
+    width:250px;
+}
+
+.formulier textarea
+{
+    width:400px;
+    height: 150px;
+}
+
+.formulier #navbar
+{
+    background: #D3D3D3;
+    border-top: solid 1px #808080;
+    border-bottom: solid 1px #808080;
+    padding: 2px;
+    text-align: center;
+}
+
+.formulier .setting
+{
+    float:left;
+    margin:5px;
+}
+
+.formulier .setting h2
+{
+    border-bottom:dotted 1px #D3D3D3;
+}
+
+.formulier .setting div.object
+{
+    margin: 5px 0;
+}
+
+.formulier .setting div.object span.title
+{
+    font-size: 110%;
+    text-decoration:underline;
+}
+
+
+
+
+
+
+
+
+.actie
+{
+    padding-bottom: 15px;
+}
+
+.settings
+{
+    border:solid 1px black;
+    padding: 2px 2px 0;
+    margin:2px;
+    float:left;
+}
+
+#info
+{
+    border: solid 2px red;
+    padding: 5px;
+    font-size: 120%;
+    float:left;
+}
+
+.behandelaars
+{
+    width:360px;
+    border: solid #D3D3D3 1px;
+    background-color:white;
+    margin: 0 2px 0 0;
+}
+
+#checkbox
+{
+    height:250px;
+    overflow-y:auto;
+    overflow-x:hidden;
+    border: solid #D3D3D3 1px;
+    margin:5px;
+    padding:2px;
+}
+
+#img
+{
+    padding: 5px 0 0 0;
+}
+
+#header #options a:link, #header #options a:visited, #header #options a:active
+{
+    display: block;
+}
+
+#header #links a:hover
+{
+    text-decoration: underline;
+}
+
+.spacer
+{
+    clear:both;
+}
+
+.float
+{
+    float: left;  
+}
+
+textarea
+{
+    display:block;
+}
+
+input
+{
+    margin:2px;
+}
+
+textarea
+{
+    margin: 2px;
+}
+
+#resultaten
+{
+    float:left;
+    margin: 4px 5px 5px;
+}
+
+#resultaten thead
+{
+    background-color: #D3DCE3;
+}
+
+#resultaten tr.pointer, #resultaten tr td.pointer
+{
+    cursor: pointer;
+}
+
+#resultaten tr#selected
+{
+    background-color:#FFCC99;
+}
+
+#resultaten tr.selected
+{
+    background-color:#FFCC99;
+}
+
+#resultaten tr.odd
+{
+    background-color:#F0F0F0;
+}
+
+#resultaten tr.user
+{
+    background-color:#9999cc;
+}
+
+#resultaten tr.red
+{
+    background-color:#FF0000;
+}
+
+#resultaten tr.orange
+{
+    background-color:#FF8800;
+}
+
+
+#resultaten tr.even
+{
+    background-color:#D8D8D8;
+}
+
+#resultaten tr.oldborder td
+{
+    border-top: 5px solid #000000
+}
+
+#resultaten tr.afgemeld
+{
+    color:#6d6d6d !important;
+}
+
+#resultaten td
+{
+    vertical-align:top;
+    border: solid 2px white;
+    padding:2px;
+}
+
+#resultaten td.probleem
+{
+    font-size:80%;
+}
+
+td#statustd
+{
+    vertical-align: top;
+}
+
+form
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+img
+{
+    padding: 0 5px 0 0;
+}
+
+.old_incident{
+    background:#D3D3D3;
+}
+
+.highlight { background-color: yellow }
+
+.ac_results {
+    padding: 0px;
+    border: 1px solid WindowFrame;
+    background-color: Window;
+    overflow: hidden;
+}
+
+.ac_results ul {
+    width: 100%;
+    list-style-position: outside;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ac_results iframe {
+    display:none;/*sorry for IE5*/
+  /*  display/**/:block;/*sorry for IE5*/
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:-1;
+    width:3000px;
+    height:3000px;
+}
+
+.ac_results li {
+    margin: 0px;
+    padding: 2px 5px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    font: menu;
+    font-size: 12px;
+    overflow: hidden;
+}
+
+.ac_loading {
+    
+}
+
+.ac_over {
+    background-color: Highlight;
+    color: HighlightText;
+}
+
+tr.selected
+{
+    background-color: #D3D3D3;
+}
+
+span.required
+{
+    color:red;
+}
+
+span.info
+{
+    color:grey;
+    font-size:70%;
+}
+
+#hint
+{
+    width:200px;
+    position:absolute;
+    left:550px;
+    top:169px;
+    border:solid 1px #808080;
+    background:#D3D3D3;
+    padding: 5px;
+}
+
+#succes
+{
+    float:left;
+    border: solid 1px green;
+    margin: 0 0 0 5px;
+}
+
+#succes h1
+{
+    font-size: 120%;
+    font-weight: 600;
+    color:white;
+    padding: 5px;
+    background: green;
+    margin: 0 0 5px;
+}
+
+#succes p
+{
+    padding: 5px;
+}
+
+#fout
+{
+    float:left;
+    border: solid 1px red;
+    margin: 0 0 0 5px;
+}
+
+#fout h1
+{
+    font-size: 120%;
+    font-weight: 600;
+    color:white;
+    padding: 5px;
+    background: #fc7070;
+    margin: 0 0 5px;
+}
+
+#fout p{
+    padding: 5px;
+}
+
+#email
+{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-image:url("../img/tbackground.png");
+    background-repeat: repeat;
+    left: 0px;
+    top: 0px;
+}
+
+#email #innerEmail{
+    background-color:#fff;
+    position:absolute;
+    border: 1px solid #808080;
+}
+
+#tiplayer
+{
+	border: solid 1px black;
+	background: grey;
+}

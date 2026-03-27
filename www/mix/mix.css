@@ -1,0 +1,35 @@
+:root { --rtvu-red: #cc0000; }
+
+/* Tabelheader */
+.table-dark { background-color: var(--rtvu-red) !important; }
+.table-dark th { background-color: var(--rtvu-red) !important; border-color: #aa0000 !important; }
+
+/* Knoppen */
+.btn-primary { background-color: var(--rtvu-red); border-color: var(--rtvu-red); }
+.btn-primary:hover { background-color: #aa0000; border-color: #aa0000; }
+
+/* DataTables paginering (Bootstrap5 variant) */
+.dataTables_wrapper .page-item.active .page-link {
+    background-color: var(--rtvu-red) !important;
+    border-color: var(--rtvu-red) !important;
+    color: #fff !important;
+}
+.dataTables_wrapper .page-link {
+    color: var(--rtvu-red) !important;
+}
+.dataTables_wrapper .page-link:hover {
+    background-color: #aa0000 !important;
+    border-color: #aa0000 !important;
+    color: #fff !important;
+}
+
+/* Actieve categorie filter */
+.cat-filter-active {
+    outline: 2px solid #fff;
+    outline-offset: 1px;
+}
+
+/* Checkboxes en switches */
+.form-check-input:checked { background-color: var(--rtvu-red); border-color: var(--rtvu-red); }
+.form-check-input:focus { box-shadow: 0 0 0 .25rem rgba(204,0,0,.25); }
+.form-switch .form-check-input:checked { background-color: var(--rtvu-red); border-color: var(--rtvu-red); }

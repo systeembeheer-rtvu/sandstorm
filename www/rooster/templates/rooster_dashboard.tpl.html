@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Rooster ICT</title>
+    <link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+
+<table class="roster-table">
+    <thead id="rooster-head"></thead>
+    <tbody id="rooster-body"></tbody>
+</table>
+
+<!-- Legenda -->
+<div class="row legend">
+    <div class="col-md-2"><p class="div largetime text-center">DIV</p></div>
+    <div class="col-md-2"><p class="servicedesk largetime text-center">Servicedesk</p></div>
+    <div class="col-md-2"><p class="saccent largetime text-center">S-accent</p></div>
+    <div class="col-md-2"><p class="wow largetime text-center">WOW</p></div>
+    <div class="col-md-2"><p class="cursus largetime text-center">Cursus</p></div>
+    <div class="col-md-2"><p class="extern largetime text-center">Extern</p></div>
+    <div class="col-md-2"><p class="overig largetime text-center">Overig</p></div>
+    <div class="col-md-2"><p class="storingsdienst largetime text-center">Storingsdienst</p></div>
+</div>
+
+<script>
+{literal}
+
+function renderRoster(data) {
+    // Header
+    let head = '<tr>';
+    head += `<th class="largeheader text-center">Week<br>${data.week1} / ${data.week2}</th>`;
+    for (const dag of data.dagen) {
+        head += `<th class="largeheader text-center${dag.isToday ? ' bgRed' : ''}">${dag.dag}<br>${dag.datum}</th>`;
+    }
+    head += '</tr>';
+    document.getElementById('rooster-head').innerHTML = head;
+
+    // Body
+    const tbody = document.getElementById('rooster-body');
+    let html = '';
+
+    for (const naam of data.names) {
+        const dagenData = data.roster[naam] ?? {};
+        html += `<tr class="customrow"><td class="largename">${naam}</td>`;
+
+        for (const dag of data.dagen) {
+            const blokken = dagenData[dag.date] ?? {};
+            html += '<td class="custompadding">';
+
+            if (blokken.full) {
+                html += '<div class="cell-full-day">';
+                for (const blok of blokken.full) {
+                    html += `<p class="${blok.cssClass} largetime text-center">&nbsp;</p>`;
+                }
+                html += '</div>';
+            }
+
+            if (blokken.normal) {
+                html += '<div class="cell-flex">';
+                const n = blokken.normal;
+                for (let i = 0; i < n.length; i++) {
+                    const blok = n[i];
+                    let label;
+                    if (n.length === 1) {
+                        label = blok.tijd;
+                    } else {
+                        const parts = blok.tijd.split(' - ');
+                        label = (i === n.length - 1) ? parts[1] : parts[0];
+                    }
+                    html += `<p class="${blok.cssClass} largetime text-center">${label}</p>`;
+                }
+                html += '</div>';
+            }
+
+            html += '</td>';
+        }
+
+        html += '</tr>';
+    }
+
+    tbody.innerHTML = html;
+}
+
+function fetchRoster() {
+    fetch('rooster_api.php')
+        .then(r => r.json())
+        .then(data => renderRoster(data))
+        .catch(err => console.error('Rooster fetch fout:', err));
+}
+
+fetchRoster();
+setInterval(fetchRoster, 60000); // refresh every 60 seconds
+{/literal}
+</script>
+</body>
+</html>

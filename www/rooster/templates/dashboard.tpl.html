@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Rooster ICT</title>
+    <link rel="stylesheet" href="style.css?v=1">
+</head>
+<body>
+
+<table class="roster-table">
+    <thead>
+        <tr>
+            <th class="largeheader text-center">Week <br /> {$week1} / {$week2}</th>
+            {foreach $dagenFormatted as $dag}
+                <th class="largeheader text-center {if $dag.isToday}bgRed{/if}">
+                    {$dag.label nofilter}
+                </th>
+            {/foreach}
+        </tr>
+    </thead>
+    <tbody>
+        {foreach $rooster as $naam => $dagenData}
+        <tr class="customrow">
+            <td class="largename">{$naam|escape}</td>
+            {foreach $dagenFormatted as $dag}
+                {assign var=dateKey value=$dag.date}
+                {assign var=blokken value=$dagenData[$dateKey]|default:[]}
+                <td class="custompadding">
+                    {if isset($blokken.full)}
+                        <div class="cell-full-day">
+                            {foreach $blokken.full as $blok}
+                                <p class="{$blok.dienst|bepaalCssClass} largetime text-center">&nbsp;</p>
+                            {/foreach}
+                        </div>
+                    {/if}
+                    {if isset($blokken.normal)}
+                        <div class="cell-flex">
+                            {foreach $blokken.normal as $blok}
+                                <p class="{$blok.dienst|bepaalCssClass} largetime text-center">{$blok.tijd|escape}</p>
+                            {/foreach}
+                        </div>
+                    {/if}
+                </td>
+            {/foreach}
+        </tr>
+        {/foreach}
+    </tbody>
+</table>
+
+<!-- Legenda -->
+<div class="row legend">
+    <div class="col-md-2"><p class="div largetime text-center">DIV</p></div>
+    <div class="col-md-2"><p class="servicedesk largetime text-center">Servicedesk</p></div>
+    <div class="col-md-2"><p class="saccent largetime text-center">S-accent</p></div>
+    <div class="col-md-2"><p class="wow largetime text-center">WOW</p></div>
+    <div class="col-md-2"><p class="cursus largetime text-center">Cursus</p></div>
+    <div class="col-md-2"><p class="extern largetime text-center">Extern</p></div>
+    <div class="col-md-2"><p class="overig largetime text-center">Overig</p></div>
+    <div class="col-md-2"><p class="storingsdienst largetime text-center">Storingsdienst</p></div>
+</div>
+
+<script>
+    setInterval(() => location.reload(), 900000); // auto-refresh every 15 minutes
+</script>
+</body>
+</html>

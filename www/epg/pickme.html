@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datepicker Form with Sortable Table</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery UI CSS -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
+    <!-- Custom CSS -->
+    <style>
+        .quick-select-buttons {
+            display: flex;
+            align-items: center;
+        }
+        .quick-select-buttons button {
+            margin-right: 5px;
+        }
+        .form-inline .form-group {
+            margin-right: 10px;
+        }
+        .checkbox-filters {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .checkbox-filters label {
+            margin-right: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5">
+    <form id="dateForm" class="form-inline" method="GET">
+        <div class="form-group">
+            <label for="zender" class="mr-2">Zender:</label>
+            <select class="form-control" id="zender" name="zender">
+                <option value="RTV Utrecht">RTV Utrecht</option>
+                <option value="UStad">UStad</option>
+                <option value="Radio M Utrecht">Radio M Utrecht</option>
+                <option value="BingoFM">BingoFM</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="datepicker" class="mr-2">Select Date:</label>
+            <input type="text" class="form-control" id="datepicker" name="date">
+        </div>
+        <div class="quick-select-buttons">
+            <button type="button" class="btn btn-secondary" onclick="setQuickDate('yesterday')">Yesterday</button>
+            <button type="button" class="btn btn-secondary" onclick="setQuickDate('today')">Today</button>
+            <button type="button" class="btn btn-secondary" onclick="setQuickDate('tomorrow')">Tomorrow</button>
+            <button type="button" class="btn btn-secondary" onclick="setQuickDate('lastWeek')">Last Week</button>
+            <button type="button" class="btn btn-secondary" onclick="setQuickDate('nextWeek')">Next Week</button>
+            <button type="button" class="btn btn-secondary" onclick="setQuickDate('lastMonth')">Last Month</button>
+            <button type="button" class="btn btn-secondary" onclick="setQuickDate('nextMonth')">Next Month</button>
+        </div>
+        <button type="submit" class="btn btn-primary ml-2">Submit</button>
+    </form>
+
+    <div class="checkbox-filters mt-4">
+        <label><input type="checkbox" id="filterHerhaling"> Herhaling</label>
+        <label><input type="checkbox" id="filterGepubliceerd"> Gepubliceerd</label>
+        <label><input type="checkbox" id="filterUitzendingGemist"> Uitzending Gemist</label>
+    </div>
+
+    <table id="example" class="table table-striped table-bordered" style="width:100%">
+        <thead>
+            <tr>
+                <th>Datum</th>
+                <th>Tijdstip</th>
+                <th>Programma</th>
+                <th>Herhaling</th>
+                <th>Gepubliceerd</th>
+                <th>Uitzending Gemist</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2024-07-03</td>
+                <td>10:00</td>
+                <td>News</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <td>2024-07-03</td>
+                <td>11:00</td>
+                <td>Music Hour</td>
+                <td>No</td>
+                <td>No</td>
+                <td>Yes</td>
+            </tr>
+            <!-- Add more rows as needed -->
+        </tbody>
+    </table>
+</div>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<!-- jQuery UI -->
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+<!-- DataTables JS -->
+<script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+<!-- Custom JS -->
+<script>
+    $(function() {
+        $("#datepicker").datepicker();
+
+        // Initialize DataTables
+        var table = $('#example').DataTable({
+            "order": [[ 1, "asc" ]], // Default sort on 'Tijdstip' column
+        });
+
+        $('#filterHerhaling').on('change', function() {
+            filterColumn(3, this.checked);
+        });
+
+        $('#filterGepubliceerd').on('change', function() {
+            filterColumn(4, this.checked);
+        });
+
+        $('#filterUitzendingGemist').on('change', function() {
+            filterColumn(5, this.checked);
+        });
+
+        function filterColumn(columnIndex, checked) {
+            table.column(columnIndex).search(checked ? 'Yes' : '', true, false).draw();
+        }
+    });
+
+    function setQuickDate(type) {
+        var date = new Date();
+        switch(type) {
+            case 'yesterday':
+                date.setDate(date.getDate() - 1);
+                break;
+            case 'today':
+                // Do nothing, use current date
+                break;
+            case 'tomorrow':
+                date.setDate(date.getDate() + 1);
+                break;
+            case 'lastWeek':
+                date.setDate(date.getDate() - 7);
+                break;
+            case 'nextWeek':
+                date.setDate(date.getDate() + 7);
+                break;
+            case 'lastMonth':
+                date.setMonth(date.getMonth() - 1);
+                break;
+            case 'nextMonth':
+                date.setMonth(date.getMonth() + 1);
+                break;
+        }
+        $("#datepicker").datepicker("setDate", date);
+    }
+</script>
+
+</body>
+</html>

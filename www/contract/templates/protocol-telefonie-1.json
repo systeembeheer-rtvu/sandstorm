@@ -1,0 +1,15 @@
+{
+	"template": "protocol-telefonie-1.rtf",
+	"naam": "Contract protocol telefonie-1 (telefoon vanuit RTV Utrecht)",
+	"actief": true,
+	"fields": {
+		"naam": "Naam gebruiker",
+		"datum": "Datum contract",
+		"gebruikerscategorie": "Gebruikers categorie (A\/B\/C)",
+		"merk": "Merk telefoon",
+		"type": "Type telefoon",
+		"imei": "IMEI nummer",
+		"toebehoren": "Toebehoren telefoon (wat bij de telefoon zelf zit zoals laadkabel)",
+		"accesoires": "Extra accesoires (bv lader, oortjes, hoesje)"
+	}
+}

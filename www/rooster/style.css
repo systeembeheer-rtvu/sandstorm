@@ -1,0 +1,163 @@
+body {
+    font-family: Trebuchet MS, sans-serif;
+    background: #0e1117;
+    color: white;
+    margin: 0;
+    padding: 20px;
+}
+
+.roster-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #0e1117;
+}
+
+.roster-table th,
+.roster-table td {
+    border: 1px solid white;
+    text-align: center;
+    vertical-align: middle;
+    width: 150px;
+    height: 65px;
+    padding: 0;
+}
+
+.largeheader,
+.largename {
+    font-size: 25px;
+    background: #1c1c1c;
+}
+
+.bgRed {
+    background: #8b0000;
+}
+
+.custompadding {
+    position: relative;
+    height: 100%;
+    padding: 0;
+}
+
+.custompadding p {
+    margin: 0;
+    padding: 10px 5px;
+    border-radius: 3px;
+}
+
+.cell-full-day {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.cell-full-day p {
+    margin: 0;
+    padding: 2px;
+    font-size: 12px;
+    border-radius: 2px;
+    text-align: center;
+}
+
+.cell-flex {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.cell-flex p {
+    flex: 1 1 auto;
+    margin: 0;
+    padding: 10px 5px;
+    border-radius: 3px;
+    text-align: center;
+}
+
+/* Kleuren per dienst */
+.div {
+    background: green;
+    color: white;
+}
+
+.servicedesk {
+    background: yellow;
+    color: black;
+}
+
+.saccent {
+    background: rgb(152, 180, 27);
+    color: black;
+}
+
+.wow {
+    background: #0033cc;
+    color: white;
+}
+
+.storingsdienst {
+    background: red;
+    color: white;
+}
+
+.cell-full-day p.storingsdienst {
+    padding: 2px 0;
+    font-size: 0;
+    height: 3px;
+    overflow: hidden;
+}
+
+.extern {
+    background: grey;
+    color: white;
+}
+
+.cursus {
+    background: pink;
+    color: black;
+}
+
+.ziek {
+    background: repeating-linear-gradient(
+        45deg,
+        brown,
+        brown 12px,
+        gray 12px,
+        gray 16px
+    );
+    color: black;
+}
+
+.overig {
+    background: #3d3d3d;
+    color: white;
+}
+
+.legend {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.legend .col-md-2 p {
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+    width: 250px;
+    gap: 25px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.largetime {
+    font-size: 16px;
+}

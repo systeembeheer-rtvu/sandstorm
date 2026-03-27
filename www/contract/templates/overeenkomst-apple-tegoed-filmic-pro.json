@@ -1,0 +1,10 @@
+{
+	"template": "overeenkomst-apple-tegoed-filmic-pro.rtf",
+	"naam": "Contract Apple tegoed t.b.v. Filmic Pro",
+	"actief": true,
+	"fields": {
+		"naam": "Naam gebruiker",
+		"ict-medewerker": "Naam ICT-medewerker",
+		"datum": "Datum contract"
+	}
+}

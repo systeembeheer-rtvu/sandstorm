@@ -1,0 +1,4 @@
+<FilesMatch "\.(txt|psd|log|sh)$">
+Order allow,deny
+Deny from all
+</FilesMatch>

@@ -1,0 +1,114 @@
+html, body
+{
+    font-size: 10pt;
+    font-family: tahoma;
+    text-decoration: none;
+}
+
+#site
+{
+    width:100%;
+}
+
+#header
+{
+    /*display:block;*/
+    background-color:#FFFFFF;
+    /*height:75px;*/
+}
+
+#header #title
+{
+    float:left;
+    line-height:60px;
+    font-size:200%;
+    color:#000;
+}
+
+
+#main
+{}
+
+#main #sidebar
+{
+    float:left;
+    width: 140px;
+    padding: 5px 0 5px 5px;
+}
+
+
+.actie
+{
+    padding-bottom: 15px;
+}
+
+.settings
+{
+    border:solid 1px black;
+    padding: 2px 2px 0;
+    margin:2px;
+    float:left;
+}
+
+#info
+{
+    border: solid 2px red;
+    padding: 5px;
+    font-size: 120%;
+    float:left;
+}
+
+#behandelaars
+{
+    width:200px;
+    border: solid #D3D3D3 1px;
+    background-color:white;
+    margin: 0 2px 0 0;
+}
+
+#checkbox
+{
+    height:250px;
+    overflow-y:auto;
+    overflow-x:hidden;
+    border: solid #D3D3D3 1px;
+    margin:5px;
+    padding:2px;
+}
+
+#img
+{
+    padding: 5px 0 0 0;
+}
+
+.spacer
+{
+    clear:both;
+}
+
+table{
+    border: 1px solid #000;
+}
+
+table tr.actie td{
+    border-top: 1px dashed #BEBEBE;
+}
+
+table tr.topspace td
+{
+    border-top: 1px solid #000;
+    padding:0 0 5px 0;
+}
+
+table tr td.topborder
+{
+    border-top: 1px solid #000;
+}
+
+table tr td.staticwidth{
+    width:90px;
+}
+
+table tr td.rightspacewb{
+    border-right: 1px solid #000;
+}

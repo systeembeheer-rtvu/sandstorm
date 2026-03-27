@@ -1,0 +1,17 @@
+{
+	"template": "innameformulier-bedrijfsmiddelen.rtf",
+	"naam": "Innameformulier bedrijfsmiddelen",
+	"actief": true,
+	"fields": {
+		"naam": "Naam gebruiker",
+		"ictmedewerker": "Naam ICT-medewerker",
+		"datum": "Datum contract",
+		"soort": "Soort bedrijfsmiddel",
+		"merk": "Merk bedrijfsmiddel",
+		"type": "Type bedrijfsmiddel",
+		"serienummer": "Serienummer",
+		"toebehoren": "Toebehoren",
+		"accessoires": "Accessoires",
+		"opmerkingen": "Opmerkingen"
+	}
+}

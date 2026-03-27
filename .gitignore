@@ -1,0 +1,39 @@
+# Dependencies
+www/vendor/
+include/formr/
+
+# Compiled Smarty templates
+www/epg/templates_c/
+www/rooster/templates_c/
+
+# Logs
+include/logs/
+www/rooster/debug.log
+www/spotmaster/log.txt
+
+# Generated/runtime data
+www/api/weer.json
+www/spotmaster/lastuse.txt
+www/spotmaster/tagholders.txt
+
+# Config files with secrets (use *.sample.* as template)
+include/config.inc.php
+include/config.epg.inc.php
+include/config.ftp.inc.php
+include/config.shredder.inc.php
+include/PHPAzureADoAuth/config.inc.php
+include/CertExpiry/_config.inc
+www/rooster/config.php
+www/helpdesk/config.inc.php
+www/parkuser/parkuser.inc.php
+
+# API key lives here — do not commit
+www/ai/config.php
+
+# Contract documents with personal data
+www/contract/contracten/
+www/telefonie/contracten/
+
+# Misc
+*.swp
+.DS_Store

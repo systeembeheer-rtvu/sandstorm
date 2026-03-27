@@ -1,0 +1,9 @@
+{
+    "template": "mijngesprek.rtf",
+    "naam": "Versturen MijnGesprek gegevens",
+    "actief": true,
+    "fields": {
+        "voornaam": "Voornaam gebruiker",
+        "telefoonnummer": "Vast nummer gebruiker (0308500###)"
+    }
+}
