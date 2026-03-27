@@ -40,6 +40,7 @@
                 <a class="menu-link" href="/ftp/create_ftp_account.php"><i class="bi bi-hdd-network"></i>FTP Account maken</a>
                 <a class="menu-link" href="/parkuser/index.php"><i class="bi bi-person-plus"></i>Parkuser</a>
                 <a class="menu-link" href="/rooster/dashboard.php"><i class="bi bi-calendar-week"></i>Roosterscherm</a>
+                <a class="menu-link" href="/rooster/rooster_tools.php"><i class="bi bi-tools"></i>Rooster Tools</a>
             </div>
         </div>
     </div>

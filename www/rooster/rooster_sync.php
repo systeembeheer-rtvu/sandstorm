@@ -36,6 +36,7 @@ include "config.php"; // $calenderconfig (TENANT_ID/CLIENT_ID/CLIENT_SECRET)
 
 // -------------------- CONFIG --------------------
 $DO_WRITES    = true;  // <<< set false for report-only
+if (getenv('ROOSTER_SYNC_DRY_RUN') === '1') $DO_WRITES = false;
 $CALENDAR_ID  = 'default';
 
 // -------------------- EMAIL CONFIG --------------------
@@ -521,19 +522,23 @@ if (!empty($email_report)) {
 
     $sendTo = $email_override ?: $email_to;
 
-    $mail = new PHPMailer();
-    $mail->IsMail();
-    $mail->From     = $email_from;
-    $mail->FromName = $email_from_name;
-    $mail->AddAddress($sendTo);
+    $mail = new PHPMailer(true);
+    $mail->isSMTP();
+    $mail->Host       = 'smtp.park.rtvutrecht.nl';
+    $mail->Port       = 25;
+    $mail->SMTPAutoTLS = false;
+    $mail->SMTPAuth   = false;
+    $mail->setFrom($email_from, $email_from_name);
+    $mail->addAddress($sendTo);
     $mail->Subject  = "Rooster sync $dateStr ($mode)";
-    $mail->IsHTML(true);
+    $mail->isHTML(true);
     $mail->Body     = $html;
 
-    if (!$mail->Send()) {
-        echo "Email fout: " . $mail->ErrorInfo . "\n";
-    } else {
+    try {
+        $mail->send();
         echo "Email verzonden naar $sendTo\n";
+    } catch (Exception $e) {
+        echo "Email fout: " . $mail->ErrorInfo . "\n";
     }
 }
 echo "</pre>";
