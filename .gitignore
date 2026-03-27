@@ -5,6 +5,9 @@ include/formr/
 # Compiled Smarty templates
 www/epg/templates_c/
 www/rooster/templates_c/
+www/templates_c/
+www/parkuser/templates_c/
+www/contract/templates_c/
 
 # Logs
 include/logs/
