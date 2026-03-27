@@ -6,9 +6,12 @@
 {/block}
 
 {block name="content"}
-<div class="mb-4">
-    <h2><i class="bi bi-file-earmark-text me-2"></i>Contracten</h2>
-    <p class="text-muted">Kies een template om in te vullen.</p>
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+        <h2 class="mb-0"><i class="bi bi-file-earmark-text me-2"></i>Contracten</h2>
+        <p class="text-muted mb-0">Kies een template om in te vullen.</p>
+    </div>
+    <a href="/contract/beheer.php" class="btn btn-outline-secondary btn-sm"><i class="bi bi-gear me-1"></i>Beheer</a>
 </div>
 
 <div class="row g-3">
